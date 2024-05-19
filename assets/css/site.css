@@ -1,0 +1,68 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat-alternates');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || Variables */
+:root {
+    --HEADER-HEIGHT: 7rem;
+}
+
+html {
+    font-family: 'Montserrat alternates';
+    font-weight: 500;
+    background-color: #02100b;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    height: var(--HEADER-HEIGHT);
+}
+
+.navbar {
+    background-color: #000;
+    display: flex;
+    min-height: 3.5rem;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar-left {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.navbar-right {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.navbar-link {
+    min-height: 3.5rem;
+    color: #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-decoration: none;
+    align-content: center;
+}
+.navbar-link:hover, navbar-link:focus {
+    opacity: 0.5;
+}
+
+.navbar-icon {
+    padding: 0.5rem;
+}
+
+main {
+    font-size: 1rem;
+    margin-left: 25%;
+    margin-right: 25%;
+}
