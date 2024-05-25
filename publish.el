@@ -61,27 +61,49 @@
                 (href "assets/css/fontawesome.min.css")))
        (link (@ (rel "stylesheet")
                 (href "assets/css/solid.min.css")))
-       (title ,title))
+       (link (@ (rel "stylesheet")
+                (href "assets/css/brands.min.css")))
+       (title
+        ,(if-let ((html-title (plist-get info :html-title))) html-title title)))
       (body
        (header
         (nav (@ (class "navbar"))
              (div (@ (class "navbar-left"))
-                  (a (@ (class "navbar-link") (href "/"))
+                  (a (@ (class "navbar-item") (href "/"))
                      (span (@ (class "fas fa-house navbar-icon")) ""))
-                  (a (@ (class "navbar-link") (href "/about"))
+                  (a (@ (class "navbar-item") (href "/about.html"))
                      (span (@ (class "fas fa-info-circle navbar-icon")) "") "About me")
-                  (a (@ (class "navbar-link") (href "/projects"))
-                     (span (@ (class "fas fa-tools navbar-icon")) "") "Projects")
-                  (a (@ (class "navbar-link") (href "/publications"))
+                  (div (@ (class "navbar-item menu"))
+                       (span (@ (class "fas fa-tools navbar-icon")) "")
+                       (span (@ (class "menu-title")) "Projects ")
+                       (span (@ (class "fas fa-caret-down")) "")
+                       (div (@ (class "menu-content"))
+                            (a (@ (class "menu-item") (href "/mathematics")) "Mathematics")
+                            (a (@ (class "menu-item") (href "/software")) "Software")
+                            (a (@ (class "menu-item") (href "/latex")) "LaTeX")
+                            (a (@ (class "menu-item") (href "/translations")) "Translations")))
+                  (a (@ (class "navbar-item") (href "/publications"))
                      (span (@ (class "fas fa-pen-nib navbar-icon")) "") "Publications")
-                  (a (@ (class "navbar-link") (href "/cv"))
+                  (a (@ (class "navbar-item") (href "/cv.html"))
                      (span (@ (class "fas fa-graduation-cap navbar-icon")) "") "CV")
-                  (a (@ (class "navbar-link") (href "/news"))
+                  (a (@ (class "navbar-item") (href "/news.html"))
                      (span (@ (class "fas fa-bullhorn navbar-icon")) "") "News"))
              (div (@ (class "navbar-right"))
-                  (a (@ (class "navbar-link") (href "/en")) "English")
-                  (a (@ (class "navbar-link") (href "/es")) "Español"))))
-       (main ,content))))))
+                  (a (@ (class "navbar-item")
+                        (href "https://orcid.org/0000-0002-0368-2161"))
+                     (span (@ (class "fa-brands fa-orcid")) ""))
+                  (a (@ (class "navbar-item")
+                        (href "https://www.researchgate.net/profile/Diego-Sejas-Viscarra-2"))
+                     (span (@ (class "fa-brands fa-researchgate")) ""))
+                  (a (@ (class "navbar-item")
+                        (href "https://www.researchgate.net/profile/Diego-Sejas-Viscarra-2"))
+                     (span (@ (class "fa-brands fa-linkedin")) ""))
+                  (a (@ (class "navbar-item") (href "/en")) "English")
+                  (a (@ (class "navbar-item") (href "/es")) "Español"))))
+       (main
+        ,(when-let ((main-class (plist-get info :html-main-class))) `(@ (class ,main-class)))
+        ,(when-let ((title (plist-get info :title))) `(h1 ,@title))
+        ,content))))))
 
 (defun dsv/site-template (content info)
   "Define the general template for the site"
@@ -92,7 +114,10 @@
 ;; Derive the publishing backend from html, but with our custom template
 (org-export-define-derived-backend 'site-html 'html
   :translate-alist
-  '((template . dsv/site-template)))
+  '((template . dsv/site-template))
+  :options-alist
+  '((:html-title "HTML-TITLE" nil nil nil)
+    (:html-main-class "HTML-MAIN-CLASS" nil nil nil)))
 
 ;; Redefine org-html-publish-to-html so it uses our custom backend
 (defun org-html-publish-to-html (plist filename pubdir)

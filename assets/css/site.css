@@ -9,12 +9,25 @@
 /* || Variables */
 :root {
     --HEADER-HEIGHT: 7rem;
+    /* --A-COLOR: #eb82a2; */
+    --H-COLOR: #94ad7a;
+    /* --H-COLOR: #8bb15c; */
+    /* --A-COLOR: #9ee2c1; */
+    /* --A-COLOR: #5abeeb; */
+    /* --A-COLOR: #a1e9ff; */
+    /* --A-COLOR: #eda800; */
+    /* --A-COLOR: #dcad70; */
+    /* --A-COLOR: #e7974a; */
+    --A-COLOR: #d6975b;
 }
+/* || Variables */
 
 html {
     font-family: 'Montserrat alternates';
-    font-weight: 500;
-    background-color: #02100b;
+    font-weight: 400;
+    /* background-color: #02150b; */
+    /* background-color: #1b2032; */
+    background-color: #212936;
     color: #fff;
 }
 
@@ -24,13 +37,17 @@ header {
 }
 
 .navbar {
-    background-color: #000;
+    position: fixed;
+    background-color: #131b25;
     display: flex;
     min-height: 3.5rem;
+    min-width: 100vw;
     flex-direction: row;
     flex-wrap: no-wrap;
     padding-left: 1rem;
     padding-right: 1rem;
+    /* border-top: 1px solid red; */
+    /* border-bottom: 1px solid white; */
 }
 
 .navbar-left {
@@ -45,24 +62,133 @@ header {
     justify-content: flex-end;
 }
 
-.navbar-link {
+.navbar-item {
     min-height: 3.5rem;
     color: #fff;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     text-decoration: none;
     align-content: center;
 }
-.navbar-link:hover, navbar-link:focus {
+.navbar-item:hover, .navbar-item:focus {
     opacity: 0.5;
+    /* color: var(--A-COLOR); */
 }
 
 .navbar-icon {
-    padding: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.menu {
+    display: inline-block;
+    width: auto;
+}
+.menu:hover {
+    opacity: 1;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    /* background-color: #445044; */
+    background-color: #353d4b;
+    padding: 1rem;
+    font-size: 0.95rem;
+    /* border-top: 2px solid #000; */
+    border-radius: 0 0 7.5px 7.5px;
+}
+.menu:hover .menu-content {
+    display: block;
+    z-index: 20;
+}
+.menu:hover .menu-title {
+    opacity: 0.5;
+    /* color: var(--A-COLOR); */
+}
+
+.menu-item {
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+.menu-item:hover, .menu-item:focus {
+    font-weight: bold;
+    /* color: var(--A-COLOR); */
 }
 
 main {
     font-size: 1rem;
     margin-left: 25%;
     margin-right: 25%;
+    line-height: 1.75;
+}
+
+/* || For the welcome page */
+.welcome {
+    min-height: calc(100vh - var(--HEADER-HEIGHT));
+    align-content: center;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.my-name {
+    font-size: 3rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.my-profession {
+    font-size: 2rem;
+    font-weight: 500;
+    opacity: 0.5;
+}
+/* || For the welcome page */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--H-COLOR);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--H-COLOR);
+    padding: 2rem 0 0 0;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--H-COLOR);
+    padding: 1.5rem 0 0 0;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--H-COLOR);
+    padding: 1rem 0 0 0;
+}
+
+a {
+    font-weight: 500;
+    color: var(--A-COLOR);
+    text-decoration: none;
+}
+
+tbody tr {
+    /* border-top: 2px solid #3f444d; */
+    vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #323a46;
+}
+
+tbody td {
+    padding: 0.25rem 1rem 0 1rem;
 }

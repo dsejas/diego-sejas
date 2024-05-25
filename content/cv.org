@@ -1,0 +1,258 @@
+#+title: Diego Sejas
+#+AUTHOR: Diego Sejas
+#+STARTUP: align
+
+* Education
+** Licenciado en Ingeniería Matemática, Universidad Mayor de San Simón (2012)
+(Equivalent to *B.Sc. of Mathematical Engineering*.)
+
+* Experience
+** Research Experience
+*** Visiting Researcher, Mathematics Department, Universidad Mayor de San Simón
+/2023 May – present/
+
+*** Associate Researcher, Centro de Control y Monitoreo de Satélites (COMS), Universidad Privada Boliviana
+/2022 June – present/
+
+Responsibilities:
+
+- Main developer of the orbit prediction and simulation software.
+- Numerical analysis and implementations of algorithms.
+- Advisor on Mathematics, software development and publication quality standards.
+
+*** Visiting Researcher, Mathematics Department, Universidad Simón I. Patiño
+/2020 January – 2021 December/
+
+Six papers (co-)authored (see ++++Publications++++).
+
+*** Undergraduate Researcher, Mathematics Department, Universidad Mayor de San Simón.
+/2007 September – 2009 April/
+
+- Research project /El problema del transbordo en el transporte público [The Transshipment Problem in Public Transport]/.
+- Advisor: Luis Roberto Zegarra Dorado, M.Sc.
+- Byproducts:
+  - Three articles (see ++++Publications++++).
+  - Software: /SciDijkstra/, written in Scilab.
+
+*** Undergraduate Researcher, Grupo de Señales San Simón, Universidad Mayor de San Simón.
+/2007 September – 2007 November/
+
+- Research project /Wavelets/.
+- Advisor: Santiago Relos Paco, M.Sc.
+- Byproducts:
+  - One article (see ++++Publications++++).
+  - One conference (see ++++Conferences, Seminars, and Courses++++).
+
+*** Researcher, Sociedad Científica de Estudiantes de Matemáticas.
+/2004 – 2005/
+
+- Research project: /Fractales [Fractals]/.
+- Byproducts: Many fractals (escape time, quaternions, octonions, and IFSs).
+
+** Proofreading and Maths Consulting Experience
+*** Textbook /Curso Preuniversitario [Pre-University Course]/.
+- Author: Santiago Relos Paco, M.Sc.
+
+*** Textbook /Curso Básico de Álgebra Lineal [Basic Course on Linear Algebra]/.
+- Author: Santiago Relos Paco, M.Sc.
+
+*** Textbook /Cálculo I [Calculus I]/.
+- Author: Santiago Relos Paco, M.Sc.
+
+** English to Spanish Translation Experience
+*** Book /Sage para Estudiantes de Pregrado [Sage for Undergraduates]/.
+- Author: Gregory V. Bard.
+- Translation under Prof. Bard's weekly supervision, and with permission from the American Mathematical Society.
+- The American Institute of Mathematics (AIM) placed /Sage for Undergraduates/ on its list of "Approved Open-Access Textbooks", judged to meet its strict evaluation criteria. The Spanish version [[https://aimath.org-textbooks/approved-textbooks/][is also listed]].
+
+*** [In progress] Book /Matemática Computacional con SageMath [Computational Mathematics with SageMath]/.
+- Authors: Paul Zimmermann, Alexandre Casamayou, Nathann Cohen, Guillaume Connan, Thierry Dumont, Laurent Fousse, François Maltey, Matthias Meulien, Marc Mezzarobba, Clément Pernet, Nicolas M. Thiéry, Erik Bray, John Cremona, Marcelo Forets, Alexandru Ghitza, Hugh Thomas, Diego Sejas-Viscarra.
+
+- The American Institute of Mathematics (AIM) placed /Sage for Undergraduates/ on its list of "Approved Open-Access Textbooks", judged to meet its strict evaluation criteria.
+
+** Teaching Experience
+
+- U.M.S.S.: Universidad Mayor de San Simón.
+- U.P.B.: Universidad Privada Boliviana.
+- U.S.I.P.: Universidad Simón I. Patiño.
+
+ † Students evaluate professors.
+
+*** As Professor
+
+| Course                         | Department                 | Employer | Period                  | Time load   | Evaluation† |
+|--------------------------------+----------------------------+----------+-------------------------+-------------+-------------|
+| Axiomatic Set Theory           | Mathematics                | U.S.I.P. | Semester I/2013         | 3 hrs./week | Unavailable |
+| Calculus III                   | Telecommunications Eng.    | U.S.I.P, | Semester I/2013         | 3 hrs./week | Unavailable |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 25/03/2013 – 10/05/2013 | 64 hrs.     |       83.48 |
+| Linear Algebra                 | Eng. and Architecture      | U.P.B.   | 13/05/2013 – 28/06/2013 | 64 hrs.     |       86.44 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 03/07/2013 - 30/07/2013 | 48 hrs      |       96.08 |
+| Lin. Alg. and Vectorial Geom.  | (Informatics) Systems Eng. | U.S.I.P. | 08/2013                 | 6 hrs/week  | Unavailable |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 19/11/2013 - 20/12/2013 | 69 hrs      |       91.18 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 06/01/2014 - 01/02/2014 | 69 hrs      |       89.16 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 25/03/2014 - 09/05/2014 | 64 hrs      |       86.83 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 25/03/2014 - 09/05/2014 | 64 hrs      |       93.39 |
+| Linear Algebra                 | Eng. and Arch.             | U.P.B.   | 14/05/2014 - 27/06/2014 | 64 hrs      |       85.08 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 23/09/2014 - 06/11/2014 | 48 hrs      |       93.11 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 24/11/2014 - 20/12/2014 | 69 hrs      |       85.72 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 05/01/2015 - 31/01/2015 | 69 hrs      |       91.48 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 24/11/2014 - 20/12/2014 | 69 hrs      |       92.45 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 05/01/2015 - 31/01/2015 | 69 hrs      |       87.52 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 23/03/2015 - 11/05/2015 | 64 hrs      |       94.49 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 23/03/2015 - 11/05/2015 | 64 hrs      |       92.67 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 23/03/2015 - 11/05/2015 | 64 hrs      |       91.91 |
+| Linear Algebra                 | Eng. and Arch.             | U.P.B.   | 12/05/2015 - 30/06/2015 | 64 hrs      |       91.68 |
+| Introduction to Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 03/08/2015 - 04/09/2015 | 48 hrs      |       94.55 |
+| (Accelerated) Mathematics I    | Business Sciences          | U.P.B.   | 18/09/2015 - 04/11/2015 | 48 hrs      |       92.61 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 23/11/2015 - 19/12/2015 | 69 hrs      |       93.78 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 23/11/2015 - 19/12/2015 | 69 hrs      |       86.11 |
+| Introduction to Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 01/02/2016 - 08/03/2016 | 48 hrs      |       91.87 |
+| Applied Linear Algebra         | Business Sciences          | U.P.B.   | 01/02/2016 - 08/03/2016 | 48 hrs      |       90.01 |
+| Introduction to Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 01/08/2016 - 01/09/2016 | 48 hrs      |       79.32 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 23/11/2016 - 20/12/2016 | 69 hrs      |       93.84 |
+| Introduction to Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 06/02/2017 - 13/03/2017 | 48 hrs      |       84.52 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 27/03/2017 - 11/05/2017 | 64 hrs      |       94.69 |
+| Linear Algebra                 | Eng. and Arch.             | U.P.B.   | 16/05/2017 - 30/06/2017 | 64 hrs      |       89.95 |
+| Applied Linear Algebra         | Business Sciences          | U.P.B.   | 16/05/2017 - 19/06/2017 | 64 hrs      |       79.57 |
+| Introduction to Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 01/08/2017 - 01/09/2017 | 48 hrs      |       84.79 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 15/09/2017 - 01/11/2017 | 48 hrs      |       88.41 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 22/11/2017 - 18/12/2017 | 69 hrs      |       83.03 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 22/11/2017 - 18/12/2017 | 69 hrs      |       90.14 |
+| Introduction to Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 05/02/2018 - 14/03/2018 | 48 hrs      |       72.17 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 27/03/2018 - 11/05/2018 | 64 hrs      |       90.13 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 27/03/2018 - 11/05/2018 | 64 hrs      |       84.19 |
+| Pre-University Mathematics     | Eng., Arch. and Bus. Sci.  | U.P.B.   | 28/11/2019 - 21/12/2019 | 69 hrs      |       92.14 |
+| Mathematics I                  | Business Sciences          | U.P.B.   | 28/03/2022 - 13/05/2022 | 64 hrs      |       94.57 |
+| Numerical Methods              | Eng. and Arch.             | U.P.B.   | 16/05/2022 - 30/06/2022 | 64 hrs      |       96.85 |
+| Linear Algebra                 | Eng. and Arch.             | U.P.B.   | 16/05/2022 - 30/06/2022 | 64 hrs      |       91.50 |
+| Preparatory 2---Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 01/07/2022 - 28/07/2022 | 64 hrs      |       94.83 |
+| Mathematics II                 | Business Sciences          | U.P.B.   | 01/08/2022 - 13/09/2022 | 64 hrs      |       88.84 |
+| Mathematics for Engineering I  | Eng. and Arch.             | U.P.B.   | 15/09/2022 - 03/11/2022 | 64 hrs      |       92.02 |
+| Mathematics for Engineering II | Eng. and Arch.             | U.P.B.   | 15/09/2022 - 03/11/2022 | 64 hrs      |       97.72 |
+| Preparatory 2---Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 21/11/2022 - 17/12/2022 | 92 hrs      |       91.34 |
+| Preparatory 2---Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 21/11/2022 - 17/12/2022 | 92 hrs      |       92.71 |
+| Introduction to Mathematics    | Eng., Arch. and Bus. Sci.  | U.P.B.   | 06/02/2023 - 14/03/2023 | 48 hrs      |       91.01 |
+| Linear Algebra                 | Eng. and Arch.             | U.P.B.   | 12/05/2023 - 28/06/2023 | 64 hrs      |       98.06 |
+
+*** As Teaching Assistant
+| Course                   | Department  | University | Semester | Hrs./week |
+|--------------------------+-------------+------------+----------+-----------|
+| Linear Algebra           | Mathematics | U.M.S.S.   | I/2005   |       1.5 |
+| Linear Algebra           | Mathematics | U.M.S.S.   | II/2005  |       1.5 |
+| Mathematical Analysis I  | Mathematics | U.M.S.S.   | II/2011  |       1.5 |
+| Mathematical Analysis II | Mathematics | U.M.S.S.   | II/2011  |       1.5 |
+| Mathematical Analysis I  | Mathematics | U.M.S.S.   | II/2012  |       1.5 |
+
+* Skills
+** Scientific Software and Programming Languages
+| Name          | Knowledge  | Experience                                                                                                                                                                                                                                                                                                                  |
+|---------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Fortran       | Advanced   | Main language used for undergraduate studies, thesis subroutines (wavelet transform), current research and development                                                                                                                                                                                                      |
+| LaTeX2e       | Advanced   | Articles, presentations, thesis project, professor of two courses (see ++++Conferences, Seminars, and Courses++++)                                                                                                                                                                                                            |
+| Scilab        | Advanced   | Secondary language used for undergraduate studies, /SciDijkstra/ software (see ++++Research Experience++++), thesis subroutines, used together with Fortran (dynamically linked), image processing, signal analysis                                                                                                             |
+| Matlab/Octave | Advanced   | Undergraduate programming course                                                                                                                                                                                                                                                                                            |
+| MathGL 2      | Advanced   | Library for scientific graphics, used with Fortran, Python, C/C++                                                                                                                                                                                                                                                           |
+| MGL           | Advanced   | Fast prototyping of scientific graphics                                                                                                                                                                                                                                                                                     |
+| Xcos          | Elemntary  | Undergraduate course on Modelling and Simulation                                                                                                                                                                                                                                                                            |
+| C/C++         | Elementary | Used for development of MathGL                                                                                                                                                                                                                                                                                              |
+| Python        | Advanced   | Primary language for research, used to work with the SageMath software. Used as part of the translation and update process of the book /Sage for Undergraduates/ (see ++++Publications++++). Learned from the book /Introduction to Programming in Python: An Interdisciplinary Approach/ (see [[https://introcs.cs.princeton.edu/python/errata/errata-printing1.php][errata I reported to the authors]]). |
+| SageMath      | Advaced    | Main software/programming language for research. Used during the translation and update process of the book /Sage for Undergraduates/ (see ++++Publications++++)                                                                                                                                                                |
+
+** Other Software and Programming Languages
+| Name            | Knowledge  | Experience                             |
+|-----------------+------------+----------------------------------------|
+| Solid Edge 2023 | Advanced   | International certification by Siemens |
+| Fusion 360      | Elementary | Hobby                                  |
+| Emacs           | Elementary | Currently learning                     |
+| Emacs Lisp      | Elementary | Currently learning                     |
+
+** Languages
+| Language | Reading       | Writing | Listening | Speaking | Notes                                                                                                                                                                                                                 |
+|----------+---------------+---------+-----------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spanish  | MOTHER TONGUE |         |           |          | Higher level than the mean on verbal communication (acquired through teaching classes, and conferences), orthography and composition (see \Literature Olympics\ on section ++++Honors, Awards, and Accomplishments++++) |
+| English  | 21/30         | 24/30   | 24/30     | 23/30    | Scores from TOEFL-iBT (total: 92/120), dated 04/10/2019. Self-taught language                                                                                                                                         |
+
+* Open Source Projects
+** The MathGL Scientific Library, co-developer
+/2014 – present/
+
+[[http://mathgl.sourceforge.net][Official website]]
+
+- Contributions: mglTeX package, IFS fractal subroutines, Fractal Flame subroutines, Spanish translation, LaTeX support, random distributions.
+- Co-developed with alexey Balakin (Russian Academy of Science).
+- Note: Contributions are sent directly to Prof. Balakin, so no activity is registered in my SourceForge account, but some of my contributions are listed on the user manual.
+
+** The mglTeX Package, author and co-developer
+/2014 November – present/
+
+[[https://www.ctan.org/pkg/mgltex][CTAN entry]]
+
+- For automatic creation and inclusion of high-quality publication-ready graphics, from MGL scripts embedded in LaTeX documents.
+
+** The upbbook LaTeX Class, developer and maintainer
+- Completed: Source code, templates.
+- In progress: Documentation, code improvements, upload to CTAN.
+
+* Conferences, talks, and courses
+| Title                                                                                                                                                                                                      | Date          | Event                                                                                                                                                                              | Note                                                                                                                           |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------|
+| HAM modificado para la resolución de sistemas de ecuaciones lineales de Fredholm-Volterra [Modified HAM for solving linear systems of Fredholm-Volterra integral equations]                                | 2022 August   | 3er Workshop en Matemática Pura y Aplicada [3rd Workshop on Pure and Applied Mathematics]                                                                                          | Based on th research paper of the same title (see ++++Publications++++)                                                          |
+| Los infinitos de Cantor [Cantor's Infinities]                                                                                                                                                              | 2017 October  | XX Congreso Boliviano de Matemáticas [XX Bolivian Mathematical Congress]                                                                                                           | Based on /Cantor's Infinities/, lecture by Professor Raymond Flood at Gresham College                                            |
+| Sobre la Construcción y Análisis Matemático de la Transformada Wavelet y sus Propiedades Matriciales [On the Construction and Mathematical Analysis of the Wavelet Transform and its Matricial Properties] | 2015 May      | Primer Congreso Internacional Científico de Ingeniería "La Ingeniería del Siglo XXI" [First International Scientific Congress of Engineering "The Engineering of the XXI Century"] | Based on my undergraduate thesis project                                                                                       |
+| Direct and inverse kinematics for robotic arms                                                                                                                                                             | 2014 December | Curso Intermedio de Robótica [Intermediate Course on Robotics]                                                                                                                     | Invited by Sawers Techonology (Cochabamba, Bolivia)                                                                            |
+| Curso de Procesador de Textos Científicos LaTeX [Course on Scientific Text Processor LaTeX]                                                                                                                | 2012 August   |                                                                                                                                                                                    |                                                                                                                                |
+| Curso de Introducción a LaTeX [Introductory Course to LaTeX]                                                                                                                                               | 2012 July     |                                                                                                                                                                                    |                                                                                                                                |
+| Sobre la Construcción y Análisis Matemático de la Transformada Wavelet y sus Propiedades Matriciales [On the Construction and Mathematical Analysis of the Wavelet Transform and its Matricial Properties] | 2011 November | XV Congreso Boliviano de Matemáticas "Hilbert" [XV Bolivian Mathematical Congress "Hilbert"]                                                                                       | Based on my undergraduates thesis project                                                                                      |
+| Sobre la Construcción y Análisis Matemático de la Transformada Wavelet y sus Propiedades Matriciales [On the Construction and Mathematical Analysis of the Wavelet Transform and its Matricial Properties] | 2011 November | Séptimas Jornadas Matemáticas [Seventh Mathematical Days]                                                                                                                          | Based on my undergraduate thesis project                                                                                       |
+| Wavelets de Haar [Haar’s Wavelets]                                                                                                                                                                         | 2007 November | Terceras Jornadas Matemáticas [Third Mathematical Days]                                                                                                                            | Exposition in partnership with César Andrés Cabrera Cabero. Part of research project: /Wavelets/ (see ++++Research Experience++++) |
+
+* Certifications
+| Certification   | Year | Level or Score | Comment                                                                                 |
+|-----------------+------+----------------+-----------------------------------------------------------------------------------------|
+| Solid Edge 2023 | 2023 | Advanced       | Granted by Siemens                                                                      |
+| TOEFL-iBT       | 2019 | 92/120         | Reading: 21/30, writing: 24/30, listening: 24/30, speaking: 23/30. Self-taught language |
+
+* Honors, Awards, and Accomplishments
+
+| Type                                                         | Date           | Granted by                                                                             | Description                                                                                                                                                                                                                                                   |
+|--------------------------------------------------------------+----------------+----------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Acknowledgment plate                                         | 2013 July      | Sociedad Boliviana de Matemáticas [Bolivian Mathematical Society]                      | For academic excellence (granted annually to the best recently-graduated student of the Mathematical Engineering career)                                                                                                                                      |
+| Diploma of honor                                             | 2011 September | Universidad Mayor de San Simón                                                         | For best academic performance among all last-year students of Mathematical Engineering                                                                                                                                                                        |
+| Diploma of honor                                             | 2010 September | Universidad Mayor de San Simón                                                         | For outstanding performance on the Mathematical Engineering career                                                                                                                                                                                            |
+| Maryknoll Medal                                              | 2003 November  | Maryknoll School                                                                       | For the best student the school's 2003 generation                                                                                                                                                                                                             |
+| Diploma of honor                                             | 2003 November  | Maryknoll School                                                                       | For the best student of the 4th of secondary "4" course                                                                                                                                                                                                       |
+| Copper medal                                                 | 2003 October   | Maryknoll School                                                                       | For the third place of the school's Chemistry Olympics                                                                                                                                                                                                        |
+| Silver medal                                                 | 2003 October   | Maryknoll School                                                                       | For the second place of the school's Literature Olympics                                                                                                                                                                                                      |
+| Diploma of honor                                             | 2003 September | /Asociación Nacional de Colegios Particulares [National Association of Private Schools]/ | For the best student of Maryknoll School                                                                                                                                                                                                                      |
+| Certificate of recognition                                   | 2003 September | /Ministerio de Educación de Bolivia [Bolivian Ministry of Education]/                    | For outstanding studies in secondary during 2003. (Only one such certificate was reserved for the best student of a private school in each Department of Bolivia. There were equivalent certificates for the categories of public school and country school.) |
+| Exemption of entrance exam and liberation of university fees |                | Universidad Mayor de San Simón                                                         | 2003 August                                                                                                                                                                                                                                                   |
+| Copper medal and certificate                                 | 2003 July      | Universidad Mayor de San Simón                                                         | For the third place of category "C" of the V Departmental Chemistry Olympics                                                                                                                                                                                  |
+| Diploma of honor                                             | 2002 December  | Maryknoll School                                                                       | For the best student of the 3rd of secondary "4" course                                                                                                                                                                                                       |
+| Diploma of honor                                             | 2001 November  | Maryknoll School                                                                       | For the best student of the 2nd of secondary "4" course                                                                                                                                                                                                       |
+| Gold Medal and diploma of honor                              | 2001 October   | Universidad Mayor de San Simón                                                         | For the first place of the XVI Departmental Mathematics Olympics                                                                                                                                                                                              |
+| Silver Medal                                                 | 2001 October   | Maryknoll School                                                                       | For the second place of the school's Physics Olympics                                                                                                                                                                                                         |
+| Gold medal                                                   | 2001 October   | Maryknoll School                                                                       | For the first place of the school's Literature Olympics                                                                                                                                                                                                       |
+| Honor certificate                                            | 2000 November  | Maryknoll School                                                                       | For the best student of the 1st of secondary "2" course                                                                                                                                                                                                       |
+| Gold medal                                                   | 2000 October   | Maryknoll School                                                                       | For the first place of the school's Literature Olympics                                                                                                                                                                                                       |
+
+* Additional Information
+** Online Profiles
+- Orcid profile: [[https://orcid.org/0000-0002-0368-2161]].
+- ResearchGate profile: [[https://www.researchgate.net/profile/Diego-Sejas-Viscarra-2]].
+- I am a regular participant of the Ask SageMath forum: [[https://ask.sagemath.org/users/23034/dsejas/]].
+
+** Memberships
+- American Mathematical Society.
+- Society for Industrial and Applied Mathematics.
+
+** Research Interests
+- *Computer Science and Computational Mathematics:* Design and analysis of algorithms, numerical analysis, computer algebra systems (specially SageMath), computational problem-solving and automation, data structures, artificial intelligence.
+- *Mathematical Modeling and Simulation:* Complex systems and complex behavior models, agent-based simulations, event-based simulation, Monte-Carlo simulations, optimization, operations research (specially, linear programming), ODEs.
+- *Data Science:* Machine learning, algorithmic analysis, algorithmic prediction.
+- *Biomathematics:* Biological systems modeling and simulation, disease transmission, life simulation.
+- *Mathematical Analysis.*
+- *Linear Algebra.*
+- *Discrete Mathematics.*
+- *Fractals and chaos.*
+- *Applied Mathematics Education.*
+- *Information Design:* Specially scientific data visualization.

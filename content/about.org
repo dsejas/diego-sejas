@@ -1,0 +1,26 @@
+I am a Mathematical Engineer from Bolivia with advanced skills
+on scientific programming. I am currently working as Associate
+Researcher at Universidad Privada Boliviana. I worked
+there and at Universidad Privada Boliviana as a professor, teaching
+to students of Mathematics, Engineering, and Business Sciences.
+
+*My research interests and interests in general*
+include many areas of Applied and Theoretical Mathematics:
+
+- Mathematical and computational modeling
+- Numerical and computational simulation
+- Scientific programming
+- Computational science
+- Analysis and design of algorithms
+- Linear Algebra
+- Mathematical Analysis
+- Fractals
+- Formal logic
+- Education
+- Mathematical art and divulgation of science
+- Artificial intelligence, machine learning and deep learning
+- Graph theory
+
+I work almost exclusively with open-source software, such as SageMath,
+Scilab, Octave, Python, etc., and I am an advocate of the Open Science
+movement.

@@ -1,0 +1,6 @@
+#+title: Publications
+
+* 2020
+| Refereed article | Diego Sejas Viscarra | /On the Construction and Mathematical Analysis of the Wavelet Transform and its Matricial Properties/ | Rose-Hulman Undergraduate Mathematics Journal |
+
+* 2021
