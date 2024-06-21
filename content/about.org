@@ -1,3 +1,5 @@
+#+title: Diego Sejas
+
 I am a Mathematical Engineer from Bolivia with advanced skills
 on scientific programming. I am currently working as Associate
 Researcher at Universidad Privada Boliviana. I worked

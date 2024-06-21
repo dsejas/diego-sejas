@@ -1,5 +1,6 @@
 #+title: Diego Sejas
 #+AUTHOR: Diego Sejas
+#+html-title: CV
 #+STARTUP: align
 
 * Education

@@ -1,6 +1,11 @@
 #+title: Publications
 
-* 2020
-| Refereed article | Diego Sejas Viscarra | /On the Construction and Mathematical Analysis of the Wavelet Transform and its Matricial Properties/ | Rose-Hulman Undergraduate Mathematics Journal |
+* Articles
+- Diego Sejas Viscarra. [[https://scholar.rose-hulman.edu/rhumj/vol21/iss1/12/][On the Construction and Mathematical Analysis of the Wavelet Transform and its Matricial Properties]]. Rose-Hulman Undergraduate Mathematics Journal.
+- Shahrina Ismail, Kamel Ariffin Mohd Atan, Kai Siong Yow, and Diego Sejas Viscarra. [[https://doi.org/10.1063/5.0056917][On the Integral Solutions of the Diophantine Equation x^4+y^4=2^kz^3 where k>1]]. AIP Conference Proceedings.
+- Ismail, S., Atan, K. A. M., Sejas-Viscarra, D., and Eshkuvatov, Z. [[https://mjms.upm.edu.my/lihatmakalah.php?kod=2022/May/16/2/317-328][Determination of Gaussian Integer Zeroes of F(x,z)=2x^4-z^3]]. Malaysian Journal of Mathematical Sciences.
+- Z. K. Eshkuvatov, S. Ismail, R. D. Aloev, Kh. X. Mamatova, and D. Sejas Viscarra. [[https://mjms.upm.edu.my/lihatmakalah.php?kod=2022/January/16/1/87-103][Modified HAM for solving linear systems of Fredholm-Volterra Integral Equations]]. Malaysian Journal of Mathematical Sciences.
+- Shahrina Ismail, Kamel Ariffin Mohd Atan, Diego Sejas-Viscarra, and Kai Siong Yow. [[https://bsj.uobaghdad.edu.iq/index.php/BSJ/onlinefirst/view/7344][Gaussian Integer Solutions of the Diophantine Equation x^4+y^4=z^3 for x\ne y]]. Baghdad Science Journal.
 
-* 2021
+* Translations
+- Gregory V. Bard. [[http://sage-para-estudiantes.com/][Sage para estudiantes de pregrado]].

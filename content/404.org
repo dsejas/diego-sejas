@@ -1,0 +1,6 @@
+#+title: 404
+#+html-main-class: welcome
+
+Unfortunately, that page doesn't exist
+
+Desafortunadamente, esa página no existe

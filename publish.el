@@ -43,6 +43,23 @@
   :pin "melpa-stable"
   :ensure t)
 
+;; Redefine org-html-toc
+(defun org-html-toc (depth info &optional scope)
+  "Build a table of contents.
+DEPTH is an integer specifying the depth of the table.  INFO is
+a plist used as a communication channel.  Optional argument SCOPE
+is an element defining the scope of the table.  Return the table
+of contents as a string, or nil if it is empty."
+  (let ((toc-entries
+	 (mapcar (lambda (headline)
+		   (cons (org-html--format-toc-headline headline info)
+			 (org-export-get-relative-level headline info)))
+		 (org-export-collect-headlines info depth scope))))
+    (when toc-entries
+      `(nav (@ (class "toc"))
+        ;; (h2 (@ (class "toc-heading")) ,(org-html--translate "Table of Contents" info))
+             ,(org-html--toc-text toc-entries)))))
+
 (defun dsv/generate-html-code (title content info)
   "Generate the html code for the page"
   (concat
@@ -63,8 +80,8 @@
                 (href "assets/css/solid.min.css")))
        (link (@ (rel "stylesheet")
                 (href "assets/css/brands.min.css")))
-       (title
-        ,(if-let ((html-title (plist-get info :html-title))) html-title title)))
+       (title ,(concat "Diego Sejas | "
+        (if-let ((html-title (plist-get info :html-title))) html-title title))))
       (body
        (header
         (nav (@ (class "navbar"))
@@ -82,7 +99,7 @@
                             (a (@ (class "menu-item") (href "/software")) "Software")
                             (a (@ (class "menu-item") (href "/latex")) "LaTeX")
                             (a (@ (class "menu-item") (href "/translations")) "Translations")))
-                  (a (@ (class "navbar-item") (href "/publications"))
+                  (a (@ (class "navbar-item") (href "/publications.html"))
                      (span (@ (class "fas fa-pen-nib navbar-icon")) "") "Publications")
                   (a (@ (class "navbar-item") (href "/cv.html"))
                      (span (@ (class "fas fa-graduation-cap navbar-icon")) "") "CV")
@@ -100,10 +117,12 @@
                      (span (@ (class "fa-brands fa-linkedin")) ""))
                   (a (@ (class "navbar-item") (href "/en")) "English")
                   (a (@ (class "navbar-item") (href "/es")) "Español"))))
+       ,(org-html-toc 2 info)
        (main
         ,(when-let ((main-class (plist-get info :html-main-class))) `(@ (class ,main-class)))
         ,(when-let ((title (plist-get info :title))) `(h1 ,@title))
-        ,content))))))
+        ,content)
+       (footer ""))))))
 
 (defun dsv/site-template (content info)
   "Define the general template for the site"
@@ -123,7 +142,9 @@
 (defun org-html-publish-to-html (plist filename pubdir)
   (org-publish-org-to 'site-html
                       filename
-                      ".html"
+                      (if (string= (file-name-nondirectory filename) "404.org")
+                          ".shtml"  ;; godaddy uses this to identify 404 pages
+                          ".html")
                       plist
                       pubdir))
 
