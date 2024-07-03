@@ -60,7 +60,52 @@ of contents as a string, or nil if it is empty."
         ;; (h2 (@ (class "toc-heading")) ,(org-html--translate "Table of Contents" info))
              ,(org-html--toc-text toc-entries)))))
 
-(defun dsv/generate-html-code (title content info)
+(defun dsv/site-header-en ()
+  "Generate the html code for the site header"
+  (list `(header
+          (nav (@ (class "navbar"))
+               (div (@ (class "navbar-left"))
+                    (a (@ (class "navbar-item") (href "/"))
+                       (span (@ (class "fas fa-house navbar-icon")) ""))
+                    (a (@ (class "navbar-item") (href "/en/about"))
+                       (span (@ (class "fas fa-info-circle navbar-icon")) "") "About me")
+                    (div (@ (class "navbar-item menu"))
+                         (span (@ (class "fas fa-tools navbar-icon")) "")
+                         (span (@ (class "menu-title")) "Projects ")
+                         (span (@ (class "fas fa-caret-down")) "")
+                         (div (@ (class "menu-content"))
+                              (a (@ (class "menu-item") (href "/mathematics")) "Mathematics")
+                              (a (@ (class "menu-item") (href "/software")) "Software")
+                              (a (@ (class "menu-item") (href "/latex")) "LaTeX")
+                              (a (@ (class "menu-item") (href "/translations")) "Translations")))
+                    (a (@ (class "navbar-item") (href "/en/publications"))
+                       (span (@ (class "fas fa-pen-nib navbar-icon")) "") "Publications")
+                    (a (@ (class "navbar-item") (href "/en/cv"))
+                       (span (@ (class "fas fa-graduation-cap navbar-icon")) "") "CV")
+                    (a (@ (class "navbar-item") (href "/en/news"))
+                       (span (@ (class "fas fa-bullhorn navbar-icon")) "") "News"))
+               (div (@ (class "navbar-right"))
+                    (a (@ (class "navbar-item")
+                          (href "https://orcid.org/0000-0002-0368-2161"))
+                       (span (@ (class "fa-brands fa-orcid")) ""))
+                    (a (@ (class "navbar-item")
+                          (href "https://www.researchgate.net/profile/Diego-Sejas-Viscarra-2"))
+                       (span (@ (class "fa-brands fa-researchgate")) ""))
+                    (a (@ (class "navbar-item")
+                          (href "https://www.researchgate.net/profile/Diego-Sejas-Viscarra-2"))
+                       (span (@ (class "fa-brands fa-linkedin")) ""))
+                    (a (@ (class "navbar-item underlined") (href "/en")) "English")
+                    (a (@ (class "navbar-item") (href "/es")) "Español"))))))
+
+(defun dsv/site-footer-en ()
+  "Generate the html code for the site footer"
+  (list `(footer
+         (div (@ (class "site-footer"))
+              (div (@ (class "footer-left")) "© Diego Sejas")
+              (div (@ (class "footer-right"))
+                   (a (@ (class "navbar-item") (href "/credits.html")) "Credits"))))))
+
+(defun dsv/generate-html-code-en (title content info)
   "Generate the html code for the page"
   (concat
    "<!DOCTYPE html>"
@@ -73,60 +118,30 @@ of contents as a string, or nil if it is empty."
        (meta (@ (name "viewport")
                 (content "width=device-width, initial-scale=1, shrink-to-fit=no")))
        (link (@ (rel "stylesheet")
-                (href "assets/css/site.css")))
+                (href "/assets/css/site.css")))
        (link (@ (rel "stylesheet")
-                (href "assets/css/fontawesome.min.css")))
+                (href "/assets/css/animations.css")))
        (link (@ (rel "stylesheet")
-                (href "assets/css/solid.min.css")))
+                (href "/assets/css/fontawesome.min.css")))
        (link (@ (rel "stylesheet")
-                (href "assets/css/brands.min.css")))
+                (href "/assets/css/solid.min.css")))
+       (link (@ (rel "stylesheet")
+                (href "/assets/css/brands.min.css")))
        (title ,(concat "Diego Sejas | "
         (if-let ((html-title (plist-get info :html-title))) html-title title))))
       (body
-       (header
-        (nav (@ (class "navbar"))
-             (div (@ (class "navbar-left"))
-                  (a (@ (class "navbar-item") (href "/"))
-                     (span (@ (class "fas fa-house navbar-icon")) ""))
-                  (a (@ (class "navbar-item") (href "/about.html"))
-                     (span (@ (class "fas fa-info-circle navbar-icon")) "") "About me")
-                  (div (@ (class "navbar-item menu"))
-                       (span (@ (class "fas fa-tools navbar-icon")) "")
-                       (span (@ (class "menu-title")) "Projects ")
-                       (span (@ (class "fas fa-caret-down")) "")
-                       (div (@ (class "menu-content"))
-                            (a (@ (class "menu-item") (href "/mathematics")) "Mathematics")
-                            (a (@ (class "menu-item") (href "/software")) "Software")
-                            (a (@ (class "menu-item") (href "/latex")) "LaTeX")
-                            (a (@ (class "menu-item") (href "/translations")) "Translations")))
-                  (a (@ (class "navbar-item") (href "/publications.html"))
-                     (span (@ (class "fas fa-pen-nib navbar-icon")) "") "Publications")
-                  (a (@ (class "navbar-item") (href "/cv.html"))
-                     (span (@ (class "fas fa-graduation-cap navbar-icon")) "") "CV")
-                  (a (@ (class "navbar-item") (href "/news.html"))
-                     (span (@ (class "fas fa-bullhorn navbar-icon")) "") "News"))
-             (div (@ (class "navbar-right"))
-                  (a (@ (class "navbar-item")
-                        (href "https://orcid.org/0000-0002-0368-2161"))
-                     (span (@ (class "fa-brands fa-orcid")) ""))
-                  (a (@ (class "navbar-item")
-                        (href "https://www.researchgate.net/profile/Diego-Sejas-Viscarra-2"))
-                     (span (@ (class "fa-brands fa-researchgate")) ""))
-                  (a (@ (class "navbar-item")
-                        (href "https://www.researchgate.net/profile/Diego-Sejas-Viscarra-2"))
-                     (span (@ (class "fa-brands fa-linkedin")) ""))
-                  (a (@ (class "navbar-item") (href "/en")) "English")
-                  (a (@ (class "navbar-item") (href "/es")) "Español"))))
+       ,@(dsv/site-header-en)
        ,(org-html-toc 2 info)
        (main
         ,(when-let ((main-class (plist-get info :html-main-class))) `(@ (class ,main-class)))
         ,(when-let ((title (plist-get info :title))) `(h1 ,@title))
         ,content)
-       (footer ""))))))
+       ,@(dsv/site-footer-en))))))
+
 
 (defun dsv/site-template (content info)
   "Define the general template for the site"
-   (dsv/generate-html-code (org-export-data (plist-get info :title) info)
+   (dsv/generate-html-code-en (org-export-data (plist-get info :title) info)
                           content
                           info))
 
@@ -138,15 +153,42 @@ of contents as a string, or nil if it is empty."
   '((:html-title "HTML-TITLE" nil nil nil)
     (:html-main-class "HTML-MAIN-CLASS" nil nil nil)))
 
+(defun dsv/get-output-dir (filename pubdir)
+  (if (string-match "\\/index.org\\|\\/404.org$" filename)
+      pubdir
+    (let ((output-dir
+           (concat pubdir
+                   (downcase
+                    (file-name-as-directory
+                     (file-name-sans-extension
+                      (file-name-nondirectory filename)))))))
+      (unless (file-directory-p output-dir)
+        (make-directory output-dir t))
+      output-dir)))
+
+;; (defun org-export-output-file-name (extension &optional subtreep pub-dir)
+;;   (let ((output-dir (dsv/get-output-dir filename pub-dir)))
+;;     (concat output-dir
+;;             (if (string= (file-name-nondirectory filename) "404.org") "404" "index")
+;;             extension)))
+
 ;; Redefine org-html-publish-to-html so it uses our custom backend
 (defun org-html-publish-to-html (plist filename pubdir)
-  (org-publish-org-to 'site-html
-                      filename
-                      (if (string= (file-name-nondirectory filename) "404.org")
-                          ".shtml"  ;; godaddy uses this to identify 404 pages
-                          ".html")
-                      plist
-                      pubdir))
+  (let ((output-dir (dsv/get-output-dir filename pubdir)))
+    (cl-letf (((symbol-function 'org-export-output-file-name)
+               (lambda (extension &optional subtreep pubdir)
+                 (concat output-dir
+                         (if (string= (file-name-nondirectory filename) "404.org")
+                             "404"
+                           "index")
+                         extension))))
+      (org-publish-org-to 'site-html
+                          filename
+                          (if (string= (file-name-nondirectory filename) "404.org")
+                              ".shtml"  ;; godaddy uses requires this for 404 pages to work
+                            ".html")
+                          plist
+                          pubdir))))
 
 ;; Set some global parameters
 (setq org-html-validation-link t
@@ -169,6 +211,8 @@ of contents as a string, or nil if it is empty."
               :base-extension "css\\|woff2"
               :publishing-directory "./public/assets"
               :publishing-function org-publish-attachment)))
+
+(copy-file "./content/index.org" "./content/en/index.org" t)
 
 ;; Generate the site
 (org-publish-all t)

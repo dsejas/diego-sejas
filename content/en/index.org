@@ -1,0 +1,9 @@
+#+html-main-class: welcome
+#+html-title: Welcome!
+
+#+begin_my-name
+Diego Sejas
+#+end_my-name
+#+begin_my-profession
+Mathematical Engineer
+#+end_my-profession

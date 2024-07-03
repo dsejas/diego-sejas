@@ -1,0 +1,102 @@
+@keyframes slide-left {
+    from {
+        opacity: 0;
+        transform: translateX(1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 0;
+        transform: translateX(-1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes solidify {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes highlight {
+    from {
+        color: inherit;
+    }
+
+    to {
+        color: var(--a-color);
+    }
+}
+
+.my-name,
+.my-profession {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(1,0, -1, 0);
+    animation-fill-mode: both;
+}
+
+.my-name {
+    animation-delay: 100ms;
+    animation-name: slide-left;
+}
+
+.my-profession {
+    animation-delay: 200ms;
+    animation-name: slide-right;
+}
+
+.navbar-item:hover, .navbar-item:focus,
+.menu-item:hover, .menu-item:focus {
+    animation-name: highlight;
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(1, 0, -1, 0);
+    animation-fill-mode: both;
+    /* color: var(--a-color); */
+}
+
+.menu:focus .menu-content, .menu:focus-within .menu-content, .menu:hover .menu-content {
+    display: block;
+    animation-name: solidify;
+    animation-duration: 0.75s;
+    animation-timing-function: cubic-bezier(1, 0, -1, 0);
+    animation-fill-mode: both;
+    box-shadow: 10px 10px 5px #0008;
+}
