@@ -10,7 +10,8 @@
 :root {
     --header-height: 7rem;
     /* --a-color: #eb82a2; */
-    --h-color: #94ad7a;
+
+    /* Dark theme */
     /* --h-color: #8bb15c; */
     /* --a-color: #9ee2c1; */
     /* --a-color: #5abeeb; */
@@ -18,7 +19,84 @@
     /* --a-color: #eda800; */
     /* --a-color: #dcad70; */
     /* --a-color: #e7974a; */
-    --a-color: #d6975b;
+    --dark-h-color: #94ad7a;
+    --dark-a-color: #d6975b;
+    --dark-bg-color: #212936;
+    --dark-fg-color: #fff;
+    --dark-marginals-color: #131b25;
+    --dark-item-color: #fff;
+    --dark-menu-color: #353d4b;
+    --dark-switch-icon: '\f185';
+    --dark-switch-color: #fff;
+    --dark-tr-even-color: #323a46;
+
+    /* Light theme */
+    --light-h-color: darkred;
+    --light-a-color: teal;
+    --light-bg-color: antiquewhite;
+    --light-fg-color: black;
+    --light-marginals-color: bisque;
+    --light-item-color: #000;
+    --light-menu-color: burlywood;
+    --light-switch-icon: '\f186';
+    --light-switch-color: #000;
+    --light-tr-even-color: bisque;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --h-color: var(--dark-h-color);
+        --a-color: var(--dark-a-color);
+        --bg-color: var(--dark-bg-color);
+        --fg-color: var(--dark-fg-color);
+        --marginals-color: var(--dark-marginals-color);
+        --item-color: var(--dark-item-color);
+        --menu-color: var(--dark-menu-color);
+        --switch-icon: var(--dark-switch-icon);
+        --switch-color: var(--dark-switch-color);
+        --tr-even-color: var(--dark-tr-even-color);
+    }
+
+    #theme-switch:checked ~ #themed {
+        --h-color: var(--light-h-color);
+        --a-color: var(--light-a-color);
+        --bg-color: var(--light-bg-color);
+        --fg-color: var(--light-fg-color);
+        --marginals-color: var(--light-marginals-color);
+        --item-color: var(--light-item-color);
+        --menu-color: var(--light-menu-color);
+        --switch-icon: var(--light-switch-icon);
+        --switch-color: var(--light-switch-color);
+        --tr-even-color: var(--light-tr-even-color);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --h-color: var(--light-h-color);
+        --a-color: var(--light-a-color);
+        --bg-color: var(--light-bg-color);
+        --fg-color: var(--light-fg-color);
+        --marginals-color: var(--light-marginals-color);
+        --item-color: var(--light-item-color);
+        --menu-color: var(--light-menu-color);
+        --switch-icon: var(--light-switch-icon);
+        --switch-color: var(--light-switch-color);
+        --tr-even-color: var(--light-tr-even-color);
+    }
+
+    #theme-switch:checked ~ #themed {
+        --h-color: var(--dark-h-color);
+        --a-color: var(--dark-a-color);
+        --bg-color: var(--dark-bg-color);
+        --fg-color: var(--dark-fg-color);
+        --marginals-color: var(--dark-marginals-color);
+        --item-color: var(--dark-item-color);
+        --menu-color: var(--dark-menu-color);
+        --switch-icon: var(--dark-switch-icon);
+        --switch-color: var(--dark-switch-color);
+        --tr-even-color: var(--dark-tr-even-color);
+    }
 }
 
 html {
@@ -26,8 +104,11 @@ html {
     font-weight: 400;
     /* background-color: #02150b; */
     /* background-color: #1b2032; */
-    background-color: #212936;
-    color: #fff;
+}
+
+#themed {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
 }
 
 header {
@@ -37,7 +118,7 @@ header {
 
 .navbar {
     position: fixed;
-    background-color: #131b25;
+    background-color: var(--marginals-color);
     display: flex;
     min-height: 3.5rem;
     min-width: 100vw;
@@ -64,7 +145,7 @@ header {
 
 .navbar-item {
     min-height: 3.5rem;
-    color: #fff;
+    color: var(--item-color);
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     text-decoration: none;
@@ -92,7 +173,7 @@ header {
     display: none;
     position: absolute;
     /* background-color: #445044; */
-    background-color: #353d4b;
+    background-color: var(--menu-color);
     /* background-color: transparent; */
     padding: 1rem;
     font-size: 0.95rem;
@@ -118,7 +199,7 @@ header {
     display: block;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    color: #fff;
+    color: var(--item-color);
     text-decoration: none;
 }
 
@@ -196,7 +277,7 @@ tbody tr {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #323a46;
+    background-color: var(--tr-even-color);
 }
 
 tbody td {
@@ -257,7 +338,7 @@ footer {
 
 .site-footer {
     position: relative;
-    background-color: #131b25;
+    background-color: var(--marginals-color);
     display: flex;
     height: 3.5rem;
     min-width: 100vw;
@@ -282,4 +363,23 @@ footer {
 
 .underlined {
     text-decoration: underline;
+}
+
+#theme-switch {
+    display: none;
+}
+
+
+#switch-label {
+    display: block;
+    position: fixed;
+    top: calc(3.5rem + 50px);
+    left: calc(100vw - 75px);
+}
+
+#switch-label::before {
+    font-family: 'Font Awesome 6 Free';
+    content: var(--switch-icon);
+    color: var(--switch-color);
+    font-size: 1.5rem;
 }

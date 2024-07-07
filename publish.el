@@ -101,7 +101,7 @@ of contents as a string, or nil if it is empty."
   "Generate the html code for the site footer"
   (list `(footer
          (div (@ (class "site-footer"))
-              (div (@ (class "footer-left")) "© Diego Sejas")
+              (div (@ (class "footer-left")) (i (@ (class "fa-solid fa-copyright")) "") "&nbsp; Diego Sejas")
               (div (@ (class "footer-right"))
                    (a (@ (class "navbar-item") (href "/credits.html")) "Credits"))))))
 
@@ -130,13 +130,16 @@ of contents as a string, or nil if it is empty."
        (title ,(concat "Diego Sejas | "
         (if-let ((html-title (plist-get info :html-title))) html-title title))))
       (body
-       ,@(dsv/site-header-en)
-       ,(org-html-toc 2 info)
-       (main
-        ,(when-let ((main-class (plist-get info :html-main-class))) `(@ (class ,main-class)))
-        ,(when-let ((title (plist-get info :title))) `(h1 ,@title))
-        ,content)
-       ,@(dsv/site-footer-en))))))
+       (input (@ (type "checkbox") (id "theme-switch")))
+       (div (@ (id "themed"))
+            (label (@ (for "theme-switch") (id "switch-label")) "")
+            ,@(dsv/site-header-en)
+            ,(org-html-toc 2 info)
+            (main
+             ,(when-let ((main-class (plist-get info :html-main-class))) `(@ (class ,main-class)))
+             ,(when-let ((title (plist-get info :title))) `(h1 ,@title))
+             ,content)
+            ,@(dsv/site-footer-en)))))))
 
 
 (defun dsv/site-template (content info)

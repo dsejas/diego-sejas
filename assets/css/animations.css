@@ -58,13 +58,24 @@
 
 @keyframes highlight {
     from {
-        color: inherit;
+        color: var(--item-color);
     }
 
     to {
         color: var(--a-color);
     }
 }
+
+@keyframes shine {
+    from {
+        text-shadow: 0 0 0 var(--switch-color);
+    }
+
+    to {
+        text-shadow: 0 0 1.5rem var(--switch-color);
+    }
+}
+
 
 .my-name,
 .my-profession {
@@ -83,8 +94,10 @@
     animation-name: slide-right;
 }
 
-.navbar-item:hover, .navbar-item:focus,
-.menu-item:hover, .menu-item:focus {
+.navbar-item:hover,
+.navbar-item:focus,
+.menu-item:hover,
+.menu-item:focus {
     animation-name: highlight;
     animation-duration: 250ms;
     animation-timing-function: cubic-bezier(1, 0, -1, 0);
@@ -92,11 +105,22 @@
     /* color: var(--a-color); */
 }
 
-.menu:focus .menu-content, .menu:focus-within .menu-content, .menu:hover .menu-content {
+.menu:focus .menu-content,
+.menu:focus-within .menu-content,
+.menu:hover .menu-content {
     display: block;
     animation-name: solidify;
-    animation-duration: 0.75s;
+    animation-duration: 0.5s;
     animation-timing-function: cubic-bezier(1, 0, -1, 0);
     animation-fill-mode: both;
     box-shadow: 10px 10px 5px #0008;
+}
+
+
+#theme-switch:focus ~ #themed #switch-label::before,
+#switch-label:hover::before {
+    animation-name: shine;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(1, 0, -1, 0);
+    animation-fill-mode: forwards;
 }
