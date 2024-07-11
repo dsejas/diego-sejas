@@ -9,20 +9,13 @@
 /* Variables */
 :root {
     --header-height: 7rem;
-    /* --a-color: #eb82a2; */
 
     /* Dark theme */
-    /* --h-color: #8bb15c; */
-    /* --a-color: #9ee2c1; */
-    /* --a-color: #5abeeb; */
-    /* --a-color: #a1e9ff; */
-    /* --a-color: #eda800; */
-    /* --a-color: #dcad70; */
-    /* --a-color: #e7974a; */
     --dark-h-color: #94ad7a;
     --dark-a-color: #d6975b;
     --dark-bg-color: #212936;
     --dark-fg-color: #fff;
+    --dark-toc-a-color: #eda800;
     --dark-marginals-color: #131b25;
     --dark-item-color: #fff;
     --dark-menu-color: #353d4b;
@@ -35,11 +28,12 @@
     --light-a-color: teal;
     --light-bg-color: antiquewhite;
     --light-fg-color: black;
+    --light-toc-a-color: sienna;
     --light-marginals-color: bisque;
-    --light-item-color: #000;
+    --light-item-color: black;
     --light-menu-color: burlywood;
     --light-switch-icon: '\f186';
-    --light-switch-color: #000;
+    --light-switch-color: black;
     --light-tr-even-color: bisque;
 }
 
@@ -49,6 +43,7 @@
         --a-color: var(--dark-a-color);
         --bg-color: var(--dark-bg-color);
         --fg-color: var(--dark-fg-color);
+        --toc-a-color: var(--dark-toc-a-color);
         --marginals-color: var(--dark-marginals-color);
         --item-color: var(--dark-item-color);
         --menu-color: var(--dark-menu-color);
@@ -62,6 +57,7 @@
         --a-color: var(--light-a-color);
         --bg-color: var(--light-bg-color);
         --fg-color: var(--light-fg-color);
+        --toc-a-color: var(--light-toc-a-color);
         --marginals-color: var(--light-marginals-color);
         --item-color: var(--light-item-color);
         --menu-color: var(--light-menu-color);
@@ -77,6 +73,7 @@
         --a-color: var(--light-a-color);
         --bg-color: var(--light-bg-color);
         --fg-color: var(--light-fg-color);
+        --toc-a-color: var(--light-a-toc-color);
         --marginals-color: var(--light-marginals-color);
         --item-color: var(--light-item-color);
         --menu-color: var(--light-menu-color);
@@ -90,6 +87,7 @@
         --a-color: var(--dark-a-color);
         --bg-color: var(--dark-bg-color);
         --fg-color: var(--dark-fg-color);
+        --toc-a-color: var(--dark-a-toc-color);
         --marginals-color: var(--dark-marginals-color);
         --item-color: var(--dark-item-color);
         --menu-color: var(--dark-menu-color);
@@ -102,8 +100,6 @@
 html {
     font-family: 'Montserrat alternates', sans-serif;
     font-weight: 400;
-    /* background-color: #02150b; */
-    /* background-color: #1b2032; */
 }
 
 #themed {
@@ -120,14 +116,12 @@ header {
     position: fixed;
     background-color: var(--marginals-color);
     display: flex;
-    min-height: 3.5rem;
+    min-height: calc(0.5 * var(--header-height));
     min-width: 100vw;
     flex-flow: row no-wrap;
     padding-left: 1rem;
     padding-right: 1rem;
     z-index: 30;
-    /* border-top: 1px solid red; */
-    /* border-bottom: 1px solid white; */
     box-shadow: 0 7px 5px 0 #0008;
 }
 
@@ -144,18 +138,13 @@ header {
 }
 
 .navbar-item {
-    min-height: 3.5rem;
+    min-height: calc(0.5 * var(--header-height));
     color: var(--item-color);
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     text-decoration: none;
     align-content: center;
 }
-
-/* .navbar-item:hover, .navbar-item:focus { */
-/*     /\* opacity: 0.5; *\/ */
-/*     color: var(--a-color); */
-/* } */
 
 .navbar-icon {
     padding-right: 0.5rem;
@@ -165,35 +154,17 @@ header {
     display: inline-block;
     width: auto;
 }
-/* .menu:hover { */
-/*     opacity: 1; */
-/* } */
 
 .menu-content {
     display: none;
     position: absolute;
-    /* background-color: #445044; */
     background-color: var(--menu-color);
-    /* background-color: transparent; */
     padding: 1rem;
     font-size: 0.95rem;
     margin-top: 0.5rem;
     border-radius: 7.5px;
     z-index: 20;
 }
-/* .menu:hover .menu-content { */
-/*     display: block; */
-/*     z-index: 20; */
-/* } */
-/* .menu:focus .menu-content, .menu:focus-within .menu-content, .menu:hover .menu-content { */
-/*     display: block; */
-/*     opacity: 1; */
-/* } */
-
-/* .menu:hover .menu-title { */
-/*     opacity: 0.5; */
-/*     /\* color: var(--a-color); *\/ */
-/* } */
 
 .menu-item {
     display: block;
@@ -202,11 +173,6 @@ header {
     color: var(--item-color);
     text-decoration: none;
 }
-
-/* .menu-item:hover, .menu-item:focus { */
-/*     /\* font-weight: bold; *\/ */
-/*     color: var(--a-color); */
-/* } */
 
 main {
     min-height: calc(100vh - 2*var(--header-height));
@@ -272,7 +238,6 @@ a {
 }
 
 tbody tr {
-    /* border-top: 2px solid #3f444d; */
     vertical-align: top;
 }
 
@@ -287,18 +252,12 @@ tbody td {
 .toc {
     position: fixed;
     padding: 1rem 1rem 1rem 2rem;
-    /* border-radius: 7.5px 7.5px 7.5px 7.5px; */
     top: 5vh;
     left: 0;
-    /* background-color: #323a46; */
-    /* background-color: #181e27; */
-    /* height: 100vh; */
     width: 23vw;
     height: 95vh;
     overflow-y: scroll;
-    /* max-height: 90vh; */
     border-right: 2px solid #555;
-    /* background-color: white; */
     z-index: 10;
 }
 
@@ -325,8 +284,7 @@ tbody td {
 }
 
 .toc a:hover {
-    /* font-weight: bold; */
-    color: #eda800;
+    color: var(--toc-a-color);
 }
 
 footer {
@@ -340,7 +298,7 @@ footer {
     position: relative;
     background-color: var(--marginals-color);
     display: flex;
-    height: 3.5rem;
+    height: calc(0.5 * var(--header-height));
     min-width: 100vw;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -373,7 +331,7 @@ footer {
 #switch-label {
     display: block;
     position: fixed;
-    top: calc(3.5rem + 50px);
+    top: calc(0.5 * var(--header-height) + 50px);
     left: calc(100vw - 75px);
 }
 

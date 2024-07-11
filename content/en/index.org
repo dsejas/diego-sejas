@@ -1,5 +1,5 @@
-#+html-main-class: welcome
 #+html-title: Welcome!
+#+html-main-class: welcome
 
 #+begin_my-name
 Diego Sejas

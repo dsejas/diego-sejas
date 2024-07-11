@@ -72,7 +72,7 @@
     }
 
     to {
-        text-shadow: 0 0 1.5rem var(--switch-color);
+        text-shadow: 0 0 1rem var(--switch-color);
     }
 }
 
@@ -102,7 +102,6 @@
     animation-duration: 250ms;
     animation-timing-function: cubic-bezier(1, 0, -1, 0);
     animation-fill-mode: both;
-    /* color: var(--a-color); */
 }
 
 .menu:focus .menu-content,

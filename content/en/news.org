@@ -1,0 +1,6 @@
+#+title: News
+#+html-main-class: welcome
+
+No news yet
+
+Aún no hay noticias
