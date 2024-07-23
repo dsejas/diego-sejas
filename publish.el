@@ -5,17 +5,30 @@
 ;; Author: Diego Sejas-Viscarra <dsejas.math@pm.me>
 ;; Maintainer: Diego Sejas-Viscarra <dsejas.math@pm.me>
 ;; Created: May 19, 2024
-;; Modified: May 19, 2024
 ;; Version: 0.0.1
-;; Keywords: abbrev bib c calendar comm convenience data docs emulations extensions faces files frames games hardware help hypermedia i18n internal languages lisp local maint mail matching mouse multimedia news outlines processes terminals tex tools unix vc wp
-;; Homepage: https://github.com/diego/publish
-;; Package-Requires: ((emacs "24.3"))
+;; Keywords: hypermedia
+;; Homepage: https://github.com/dsejas/diego-sejas
+;; Package-Requires: ((emacs "29.4"))
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
+;; This program is free software: you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by the Free
+;; Software Foundation, either version 3 of the License, or (at your option)
+;; any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but WITHOUT
+;; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+;; or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+;; for more details.
+;;
+;; You should have received a copy of the GNU General Public License along with
+;; this program. If not, see <https://www.gnu.org/licenses/>.
+;;
 ;;; Commentary:
 ;;
-;;  Description
+;;  This script generates the html code for my personal website.
+;;  WARNING: This is a work in progress; it is not yet clean nor elegant enough.
 ;;
 ;;; Code:
 (require 'package)
@@ -68,22 +81,25 @@ of contents as a string, or nil if it is empty."
                     (a (@ (class "navbar-item") (href "/"))
                        (span (@ (class "fas fa-house navbar-icon")) ""))
                     (a (@ (class "navbar-item") (href "/en/about"))
-                       (span (@ (class "fas fa-info-circle navbar-icon")) "") "About me")
+                       (span (@ (class "fas fa-info-circle navbar-icon")) "")
+                       (span (@ (class "mobile-hidden")) "About me"))
                     (div (@ (class "navbar-item menu"))
                          (span (@ (class "fas fa-tools navbar-icon")) "")
-                         (span (@ (class "menu-title")) "Projects ")
+                         (span (@ (class "mobile-hidden")) "Projects")
+                         *RAW-STRING* "&nbsp;"
                          (span (@ (class "fas fa-caret-down")) "")
                          (div (@ (class "menu-content"))
                               (a (@ (class "menu-item") (href "/mathematics")) "Mathematics")
                               (a (@ (class "menu-item") (href "/software")) "Software")
                               (a (@ (class "menu-item") (href "/latex")) "LaTeX")
                               (a (@ (class "menu-item") (href "/translations")) "Translations")))
-                    (a (@ (class "navbar-item") (href "/en/publications"))
+                    (a (@ (class "navbar-item mobile-hidden") (href "/en/publications"))
                        (span (@ (class "fas fa-pen-nib navbar-icon")) "") "Publications")
-                    (a (@ (class "navbar-item") (href "/en/cv"))
+                    (a (@ (class "navbar-item mobile-hidden") (href "/en/cv"))
                        (span (@ (class "fas fa-graduation-cap navbar-icon")) "") "CV")
                     (a (@ (class "navbar-item") (href "/en/news"))
-                       (span (@ (class "fas fa-bullhorn navbar-icon")) "") "News"))
+                       (span (@ (class "fas fa-bullhorn navbar-icon")) "")
+                       (span (@ (class "mobile-hidden")) "News")))
                (div (@ (class "navbar-right"))
                     (a (@ (class "navbar-item")
                           (href "https://orcid.org/0000-0002-0368-2161"))
@@ -94,8 +110,8 @@ of contents as a string, or nil if it is empty."
                     (a (@ (class "navbar-item")
                           (href "https://www.researchgate.net/profile/Diego-Sejas-Viscarra-2"))
                        (span (@ (class "fa-brands fa-linkedin")) ""))
-                    (a (@ (class "navbar-item underlined") (href "/en")) "English")
-                    (a (@ (class "navbar-item") (href "/es")) "Español"))))))
+                    (a (@ (class "navbar-item underlined mobile-hidden") (href "/en")) "English")
+                    (a (@ (class "navbar-item mobile-hidden") (href "/es")) "Español"))))))
 
 (defun dsv/site-footer-en ()
   "Generate the html code for the site footer"
@@ -103,7 +119,7 @@ of contents as a string, or nil if it is empty."
          (div (@ (class "site-footer"))
               (div (@ (class "footer-left")) (i (@ (class "fa-solid fa-copyright")) "") "&nbsp; Diego Sejas")
               (div (@ (class "footer-right"))
-                   (a (@ (class "navbar-item") (href "/credits.html")) "Credits"))))))
+                   (a (@ (class "navbar-item") (href "/en/credits")) "Credits"))))))
 
 (defun dsv/generate-html-code-en (title content info)
   "Generate the html code for the page"

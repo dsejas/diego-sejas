@@ -115,7 +115,7 @@ header {
 .navbar {
     position: fixed;
     background-color: var(--marginals-color);
-    display: flex;
+    display: grid;
     min-height: calc(0.5 * var(--header-height));
     min-width: 100vw;
     flex-flow: row no-wrap;
@@ -123,27 +123,31 @@ header {
     padding-right: 1rem;
     z-index: 30;
     box-shadow: 0 7px 5px 0 #0008;
+    grid-template-areas: "navbar-left navbar-right";
 }
 
 .navbar-left {
     display: flex;
-    width: 50%;
+    grid-area: "navbar-left";
+    /* width: 50%; */
     justify-content: flex-start;
 }
 
 .navbar-right {
     display: flex;
-    width: 50%;
+    grid-area: navbar-right;
+    /* width: 50%; */
     justify-content: flex-end;
 }
 
 .navbar-item {
+    display: flex;
     min-height: calc(0.5 * var(--header-height));
     color: var(--item-color);
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     text-decoration: none;
-    align-content: center;
+    align-items: center;
 }
 
 .navbar-icon {
@@ -151,13 +155,15 @@ header {
 }
 
 .menu {
-    display: inline-block;
+    display: flex;
     width: auto;
+    align-items: center;
 }
 
 .menu-content {
     display: none;
-    position: absolute;
+    position: fixed;
+    top: 3rem;
     background-color: var(--menu-color);
     padding: 1rem;
     font-size: 0.95rem;
@@ -176,10 +182,6 @@ header {
 
 main {
     min-height: calc(100vh - 2*var(--header-height));
-    font-size: 1rem;
-    margin-left: 25%;
-    margin-right: 25%;
-    line-height: 1.75;
 }
 
 /* || For the welcome page */
@@ -254,7 +256,7 @@ tbody td {
     padding: 1rem 1rem 1rem 2rem;
     top: 5vh;
     left: 0;
-    width: 23vw;
+    max-width: 23vw;
     height: 95vh;
     overflow-y: scroll;
     border-right: 2px solid #555;
@@ -285,6 +287,17 @@ tbody td {
 
 .toc a:hover {
     color: var(--toc-a-color);
+}
+
+ul {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    margin-top: 0.5rem;
 }
 
 footer {
@@ -329,10 +342,14 @@ footer {
 
 
 #switch-label {
-    display: block;
+    display: flex;
     position: fixed;
-    top: calc(0.5 * var(--header-height) + 50px);
-    left: calc(100vw - 75px);
+    top: calc(0.5 * var(--header-height) + 20px);
+    left: calc(100vw - 50px - 20px);
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
 #switch-label::before {
@@ -340,4 +357,30 @@ footer {
     content: var(--switch-icon);
     color: var(--switch-color);
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        font-size: 1rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        line-height: 1.75;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+
+    .toc {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        font-size: 1rem;
+        margin-left: 25%;
+        margin-right: 25%;
+        line-height: 1.75;
+    }
 }

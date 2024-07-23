@@ -1,0 +1,11 @@
+#+title: Credits
+
+This website is written in [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][Emacs Lisp]] using [[https://orgmode.org/][Org Mode]], and absolutely no Javascript. Throughout its development, I have taken inspiration and knowledge from many resources, which I would like to acknowledge next:
+
+- The overall visual and internal design is taken from [[https://www.fosskers.ca/][Fossker's website]], with his kind permission. Fosskers (also known as Colin Woodbury) is the developer of the [[https://hackage.haskell.org/package/org-mode][Org-mode library for Haskell]], which allows the parsing of Org files. Unfortunately, I am not as knowledgeable as him in Haskell, but hopefully, in the near future, I will be able to use it. I recommend taking a look at his website, since he is always working on something interesting.
+
+- The Elisp code for this website is largely based on David Wilson's excellent guide [[https://systemcrafters.net/guides/#publishing-websites-with-org-mode][Publishing Websites with Org Mode]] and his code for the [[https://systemcrafters.net/][System Crafers]] website. I highly recommend his courses, guides, and videos.
+
+- The theme switch code was inspired by Teco's code for his blog [[https://blog.tecosaur.com/][This Month in Org]].
+
+Many thanks to all them, whose code and knowledge is kindly available on the web. Hopefully, this website is a good testimony to their efforts.
